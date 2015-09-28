@@ -22,6 +22,12 @@
     </script>
 </head>
 <body>
+<div>
+  <ul id="menu">
+    <li><a href="emplist.from">员工列表</a> </li>
+    <li><a href="deptlist.from">部门列表</a> </li>
+  </ul>
+</div>
   <h2>员工列表</h2>
   <div class="search_add">
     <input type="button" value="添加" class="btn_add" onclick="window.location='toAdd.from';"/>

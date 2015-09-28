@@ -12,6 +12,8 @@
     <title>emp_add</title>
 </head>
 <body>
+<div>
+</div>
   <div id="main">
 
     <div id="save_result_info" class="sava_file">保存失败</div>

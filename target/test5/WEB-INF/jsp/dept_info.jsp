@@ -12,6 +12,8 @@
     <title>dept_info</title>
 </head>
 <body>
+<div>
+</div>
   <h2>部门人员信息</h2>
   <div class="search_add">
     <input type="button" value="添加" class="btn_add" onclick="window.location='toAdd.from';"/>
