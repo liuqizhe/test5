@@ -39,6 +39,7 @@ public class CheckLoginController {
 
         if(userInfo != null) {
             session.setAttribute("user",userInfo.getUsername());
+            System.out.println(userInfo.getUsername());
             return "index" ;
         } else {
             model.addAttribute("error", "用户名密码不正确") ;

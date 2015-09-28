@@ -29,9 +29,9 @@ public class EmpListController {
         int totalRows = dao.findRows() ;
         int totalPage = 1 ;
         if(totalRows%page.getPageSize() == 0) {
-            totalPage = totalRows%page.getPageSize() ;
+            totalPage = totalRows/page.getPageSize() ;
         } else {
-            totalPage = totalRows%page.getPageSize()+1 ;
+            totalPage = totalRows/page.getPageSize()+1 ;
         }
         //将总页数放入page对象
         page.setTotalPage(totalPage);

@@ -11,7 +11,11 @@
     <title>index</title>
 </head>
 <body>
-<div>
+<div id="header">
+  <span>当前账号：<b><%=session.getAttribute("user")%></b></span>
+  <a href="../login/toLogin.from">[退出]</a>
+</div>
+<div id="navi">
   <ul id="menu">
     <li><a href="../emplist.from">员工列表</a> </li>
     <li><a href="../deptlist.from">部门列表</a> </li>

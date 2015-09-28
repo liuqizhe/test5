@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-<div>
+<div id="navi">
   <ul id="menu">
     <li><a href="emplist.from">员工列表</a> </li>
     <li><a href="deptlist.from">部门列表</a> </li>
@@ -64,7 +64,7 @@
       <c:forEach var="i" begin="1" end="${page.totalPage}">
         <c:choose>
           <c:when test="${i==page.page}">
-            <a href="emplist.from?page=${i}" class="current_page">${i}</a>
+            <a href="emplist.from?page=${i}" style="color: #f00">${i}</a>
           </c:when>
           <c:otherwise>
             <a href="emplist.from?page=${i}">${i}</a>

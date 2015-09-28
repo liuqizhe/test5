@@ -15,7 +15,8 @@
     </script>
 </head>
 <body>
-<div>
+
+<div id="navi">
   <ul id="menu">
     <li><a href="emplist.from">员工列表</a> </li>
     <li><a href="deptlist.from">部门列表</a> </li>
