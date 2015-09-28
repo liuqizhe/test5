@@ -2,6 +2,7 @@ package com.souche.dao;
 
 import com.souche.annotation.MyBatisDao;
 import com.souche.entity.Dept;
+import com.souche.entity.Emp;
 
 import java.util.List;
 
@@ -11,4 +12,6 @@ import java.util.List;
 @MyBatisDao
 public interface DeptMapperDao {
     public List<Dept> findAll() ;
+    public List<Emp> findInfo(int deptno) ;
+
 }

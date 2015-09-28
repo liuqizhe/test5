@@ -5,4 +5,38 @@
     <select id="findAll" resultType="com.souche.entity.Emp">
         SELECT * FROM EMP_TEST
     </select>
+
+    <select id="findById" resultType="com.souche.entity.Emp" parameterType="int">
+        SELECT * FROM EMP_TEST WHERE empno=#{id}
+    </select>
+
+    <insert id="saveEmp" parameterType="com.souche.entity.Emp">
+        INSERT INTO EMP_TEST(empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (#{empno},#{ename},#{job},#{mgr},sysdate(),#{sal},#{comm},#{deptno})
+    </insert>
+    
+    <delete id="deleteEmp" parameterType="int">
+        DELETE FROM EMP_TEST WHERE empno=#{id}
+    </delete>
+
+    <update id="updateEmp" parameterType="com.souche.entity.Emp">
+        UPDATE EMP_TEST SET
+        ename=#{ename},
+        job=#{job},
+        mgr=#{mgr},
+        sal=#{sal},
+        comm=#{comm},
+        deptno=#{deptno}
+        WHERE empno=#{empno}
+    </update>
+
+    <select id="findPage" parameterType="com.souche.entity.Page" resultType="com.souche.entity.Emp">
+
+        SELECT * FROM EMP_TEST ORDER BY empno LIMIT #{begin},#{pageSize}
+
+    </select>
+    
+    <select id="findRows" resultType="int">
+        SELECT count(*) FROM EMP_TEST
+    </select>
 </mapper>

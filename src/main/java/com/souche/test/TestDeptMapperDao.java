@@ -2,6 +2,7 @@ package com.souche.test;
 
 import com.souche.dao.DeptMapperDao;
 import com.souche.entity.Dept;
+import com.souche.entity.Emp;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,6 +20,11 @@ public class TestDeptMapperDao {
         List<Dept> list = dao.findAll() ;
         for (Dept d : list){
             System.out.println(d.getDeptno() + " " + d.getDname());
+        }
+
+        List<Emp> l =dao.findInfo(10) ;
+        for(Emp e : l) {
+            System.out.println(e.getEmpno()+" "+e.getEname());
         }
     }
 }

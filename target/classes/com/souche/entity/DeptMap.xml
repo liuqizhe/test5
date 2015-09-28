@@ -3,6 +3,11 @@
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.souche.dao.DeptMapperDao">
     <select id="findAll" resultType="com.souche.entity.Dept">
-        SELECT * FROM DEPT_TEST
+        SELECT d.deptno,d.dname,d.loc,e.ename manager FROM EMP_TEST e LEFT JOIN DEPT_TEST d ON e.deptno=d.deptno
+        WHERE e.job="manager" OR e.job="boss"
+    </select>
+
+    <select id="findInfo" resultType="com.souche.entity.Emp" parameterType="int">
+        SELECT e.* FROM EMP_TEST e LEFT JOIN DEPT_TEST d ON e.deptno=d.deptno WHERE d.deptno=#{deptno} ;
     </select>
 </mapper>

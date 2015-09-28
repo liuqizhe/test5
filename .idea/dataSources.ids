@@ -24,6 +24,25 @@
       <column name="deptno" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="empno"/>
     </table>
+    <table name="cost_test" schema="" catalog="mytest" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="base_duration" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="base_cost" sqlType="DOUBLE" precision="6" scale="2" nullable="true" jdbcType="8"/>
+      <column name="unit_cost" sqlType="DOUBLE" precision="6" scale="2" nullable="true" jdbcType="8"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="descr" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="creatime" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="startime" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="cost_type" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_test" schema="" catalog="mytest" type="TABLE">
+      <column name="username" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pri" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="username"/>
+    </table>
     <table name="user_test1" schema="" catalog="mytest" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>

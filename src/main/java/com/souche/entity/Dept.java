@@ -7,6 +7,15 @@ public class Dept {
     private Integer deptno ;
     private String dname ;
     private String loc ;
+    private String manager ;
+
+    public String getManager() {
+        return manager;
+    }
+
+    public void setManager(String manager) {
+        this.manager = manager;
+    }
 
     public Integer getDeptno() {
         return deptno;
