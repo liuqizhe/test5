@@ -15,7 +15,7 @@
 VALUES (#{empno},#{ename},#{job},#{mgr},sysdate(),#{sal},#{comm},#{deptno})
     </insert>
     
-    <delete id="deleteEmp" parameterType="int">
+    <delete id="deleteEmp" parameterType="int">‰
         DELETE FROM EMP_TEST WHERE empno=#{id}
     </delete>
 
