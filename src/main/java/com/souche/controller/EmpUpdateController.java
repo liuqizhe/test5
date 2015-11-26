@@ -22,6 +22,7 @@ public class EmpUpdateController {
     }
 
     @RequestMapping("/toUpdate")
+    //@RequestParam提取名为empno的Integer类型参数，作为输入参数id传入
     public String toUpdate(@RequestParam(value = "empno", required = false) Integer id, Model model) {
         Emp emp = dao.findById(id);
         model.addAttribute("emp",emp) ;

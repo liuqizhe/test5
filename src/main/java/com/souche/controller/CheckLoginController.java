@@ -28,7 +28,7 @@ public class CheckLoginController {
         String scode = (String)session.getAttribute("scode") ;
         System.out.println("用户输入："+user.getCode());
         System.out.println("Session:"+scode);
-        if(!user.getCode().equals(scode)) {
+        if(!user.getCode().toUpperCase().equals(scode)) {
             //验证码错误
             model.addAttribute("code_error","验证码错误");
             return "login" ;
