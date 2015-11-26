@@ -17,6 +17,12 @@
         document.getElementById("loginForm").submit() ;
       }
 
+//    $(function () {
+//      $('#code').click(function() {
+//        $('#code').src="getCode.from?K=" + Math.random() ;
+//      }) ;
+//    }) ;
+
     </script>
 </head>
 <body>
@@ -36,7 +42,7 @@
       <tr>
         <td class="login_info">验证码：</td>
         <td class="width70"><input name="code" type="text" class="width70"/></td>
-        <td><img src="getCode.from" alt="验证码" title="点击更换"/></td>
+        <td><img src="getCode.from" alt="验证码" title="点击更换" onClick="this.src='getCode.from?';"/></td>
         <td><span class="required">${code_error}</span></td>
       </tr>
       <tr>
